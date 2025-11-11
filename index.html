@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>petty projects</title>
+<link rel="preload" as="image" href="./assets/background.jpg">
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="fullscreen">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="header">petty projects</div>
+
+    <!-- Hotspots SVG; polygons are invisible hit-areas.
+         On hover we show pre-highlighted images instead of strokes/fills. -->
+    <svg id="hotspots" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-label="interactive navigation overlay">
+      <!-- Definitions: clip paths to keep hover images within the shapes -->
+      <defs>
+        <clipPath id="deerClip"><polygon points="560,760 585,700 600,660 630,620 665,590 710,565 760,550 805,555 845,570 885,600 915,635 940,675 955,710 960,745 950,780 930,810 900,835 860,855 810,870 760,880 720,880 690,870 655,845 630,820 610,795"/></clipPath>
+        <clipPath id="owlClip"><polygon points="980,330 1015,315 1055,305 1095,312 1130,328 1165,334 1205,325 1245,312 1285,305 1325,330 1345,360 1322,382 1288,395 1250,408 1210,420 1170,428 1135,425 1100,415 1065,398 1032,375 1005,355 988,340"/></clipPath>
+      </defs>
+
+      <!-- Deer / Store -->
+      <a xlink:href="./store.html" aria-label="Go to store">
+        <!-- Invisible click area -->
+        <polygon class="hot" fill="transparent" stroke="transparent" vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision" points="1197,616 1166,576 1154,543 1091,471 1033,479 1027,513 1035,535 962,551 890,538 845,549 667,544 670,483 647,471 618,470 609,491 615,552 595,607 593,728 555,758 549,779 555,919 564,928 590,924 587,818 599,800 645,779 634,822 652,841 693,916 708,925 734,924 738,912 692,810 711,800 768,740 796,751 834,753 859,811 798,842 751,841 740,871 810,882 886,830 836,904 838,924 867,934 903,870 930,843 941,755 986,729 1040,665 1073,641 1102,636 1152,660 1185,664 1196,652"></polygon></polygon></polygon>
+        <!-- Hover image masked to deer shape -->
+        
+        <!-- Label raised (y reduced from 760 to 700) -->
+        <text class="label" x="780" y="660">store</text>
+      </a>
+
+      <!-- Owl / Portfolio -->
+      <a xlink:href="./portfolio.html" aria-label="Go to portfolio">
+        <polygon class="hot" fill="transparent" stroke="transparent" vector-effect="non-scaling-stroke" shape-rendering="geometricPrecision" points="941,289 949,301 949,315 973,332 1000,335 1056,357 1120,366 1111,378 1111,394 1121,403 1122,418 1135,425 1139,437 1151,448 1177,460 1228,462 1267,447 1287,420 1318,426 1325,415 1324,390 1338,364 1334,343 1402,318 1479,274 1520,239 1529,226 1537,200 1529,193 1504,193 1491,205 1411,221 1367,239 1292,237 1262,251 1228,253 1191,251 1127,232 1117,233 1108,241 1102,228 1082,210 1060,201 1036,199 1025,191 1010,191 975,210 951,236"></polygon></polygon></polygon>
+        
+        <!-- Owl label in black -->
+        <text class="label label-owl" x="1175" y="320">portfolio</text>
+      </a>
+    </svg>
+
+    <div id="clock" class="clock" aria-live="polite"></div>
+
+    <div class="footer-links">
+      <a href="./portfolio.html">portfolio</a>
+      <a href="./store.html">store</a>
+    </div>
+  </main>
+<script src="./script.js"></script>
+</body>
+</html>
